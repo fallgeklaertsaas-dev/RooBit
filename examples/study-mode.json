@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "name": "Study Mode",
+  "trigger": {
+    "type": "manual"
+  },
+  "actions": [
+    {
+      "type": "set_variable",
+      "name": "mode",
+      "value": "study"
+    },
+    {
+      "type": "run_shortcut",
+      "name": "Study Focus"
+    },
+    {
+      "type": "open_app",
+      "name": "Safari"
+    },
+    {
+      "type": "repeat",
+      "times": 2,
+      "actions": [
+        {
+          "type": "notify",
+          "title": "RooBit",
+          "message": "Focus session started"
+        }
+      ]
+    }
+  ]
+}
