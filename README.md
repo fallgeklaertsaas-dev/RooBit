@@ -1,3 +1,38 @@
+# RooBit — visuelle und textuelle Apple-Automationen
+
+RooBit ist eine experimentelle Sprache und Entwicklungsumgebung für Automationen zwischen macOS und iPhone. **Sprache und langfristiges Design sind spezifiziert; die vorhandene v0.1-Software ist bislang ein begrenzter Blockly-/JSON-/Rust-Dry-Run-Prototyp.** Der Textparser für die neue Syntax, Swift-Host-Apps und echte systemweite Ausführung sind noch **nicht implementiert**.
+
+## Neu: deutschsprachiges Handbuch
+
+- [Start und erster Test](docs/handbook/START.md)
+- [RooBit-Syntax](docs/handbook/SYNTAX.md)
+- [Semantik und Typsystem](docs/handbook/SEMANTIK.md)
+- [Compiler, Lexer, Parser, AST, EBNF](docs/handbook/COMPILER.md)
+- [Blockly, bidirektionale Textansicht und UX](docs/handbook/BLOCKLY.md)
+- [Apple-Integration, Geräte, Sync, Sicherheit](docs/handbook/APPLE.md)
+- [Tests, Debugging und Qualität](docs/handbook/TESTS.md)
+- [Lernpfad und Übungen mit Lösungen](docs/handbook/LERNEN.md)
+- [Entwicklerhandbuch](docs/handbook/ENTWICKLER.md)
+- [Praxisbeispiele](docs/handbook/BEISPIELE.md)
+- [Glossar](docs/handbook/GLOSSAR.md)
+- [Dokumentations-/Wiedereinstiegsstatus](docs/STATUS-DOCS.md)
+- [Language Design und Entscheidungen](docs/LANGUAGE_DECISIONS.md)
+- [Changelog](CHANGELOG.md)
+
+## Neue Syntax: Design, noch nicht ausführbar
+
+~~~roobit
+automation StudyMode ((
+    trigger manual >
+    let subject = 'Informatik' >
+    notify('Studium', subject) >
+))
+~~~
+
+Bestätigt: ((...)) als Blockgrenze, do: für Zweige, > als Statementabschluss, Komma für Argumente, '...' als Strings und ansonsten Python-nahe Konventionen soweit RooBit keine eigene Entscheidung hat. Semikolon wurde nicht verbindlich festgelegt.
+
+---
+
 # RooBit
 
 RooBit is an experimental **visual + textual automation language for iPhone and macOS**. The long-term goal is a low-code Apple automation environment in which users can compose workflows as blocks, inspect/edit a textual representation, validate them through a typed language core, and execute supported actions through Apple host apps.
